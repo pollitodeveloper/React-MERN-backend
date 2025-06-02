@@ -5,12 +5,12 @@ const Evento = require('../models/Evento')
 
 const getEventos = async( req, res = response) => {
 
-    const evento = await Evento.find().populate('user', 'name')
+    const eventos = await Evento.find().populate('user', 'name')
     
-
+    //nota: esta es la forma en como se manda al backend(fijarse que los eventos se envian como 'eventos')
     res.json({
         ok: true,
-        evento
+        eventos
         // msg:'getEventos'
     })
 

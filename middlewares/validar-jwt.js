@@ -1,6 +1,5 @@
 const { response, request } = require('express')
 const jwt = require('jsonwebtoken')
-const { validationResult } = require('express-validator')
 
 
 const validarJWT = ( req, res = response , next ) => {
